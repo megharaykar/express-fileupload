@@ -10,7 +10,7 @@ console.log("server started")
 app.get("/", function(req,res){
     res.sendFile(__dirname+"/index.html");
 })
-app.post("/", function(req,res){
+app.post("/api/files", function(req,res){
     if(req.files){
         var file = req.files.filename,
             filename = file.name;
